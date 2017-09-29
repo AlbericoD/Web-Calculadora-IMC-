@@ -26,7 +26,6 @@ for (var index = 0; index < pacientes.length; index++) {
     calc_ok = false;
   }
   if (calc_ok) {
-
     imc.textContent = calculaImc(peso, altura);
     imc.classList.add("paciente-valido");
     console.log(pacientes);
