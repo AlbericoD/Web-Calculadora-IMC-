@@ -29,3 +29,14 @@ function criarTd(dado, classe) {
     return td;
 }
 
+function validaPaciente(peso, altura) {
+    var altura = validaAltura(altura);
+    var peso = validaPeso(peso);
+    if (altura && peso) { return true; } else { return false; }
+}
+function validaAltura(altura) {
+    if (altura >= 0 && altura <= 3.00) { return true; } else { return false; }
+}
+function validaPeso(peso) {
+    if (peso >= 0 && peso <= 300) { return true; } else { return false; }
+}
