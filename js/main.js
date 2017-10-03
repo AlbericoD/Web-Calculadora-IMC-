@@ -1,5 +1,5 @@
 var titulo = document.querySelector(".titulo");
-titulo.textContent = "Calculos Testes 05";
+titulo.textContent = "Calculos Testes";
 
 var pacientes = document.querySelectorAll(".paciente");
 for (var index = 0; index < pacientes.length; index++) {

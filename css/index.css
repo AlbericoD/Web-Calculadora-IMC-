@@ -132,14 +132,10 @@ button[disabled=disabled], button:disabled {
 .campo-invalido{
 	border: 1px solid red;
 }
-.paciente-invalido{
-	background-color: rgba(255, 162, 0, 0.6);
-	color: rgba(255, 255, 255, 0.85);
+
+.paciente-invalido {
+	background-color: lightcoral;
 }
-.paciente-valido{
-	background-color: rgba(122, 161, 55, 0.75);
-	color: rgba(255, 255, 255, 0.85);
-}
-#msg-erro{
-	color: #EC0A0A;
+#mensagem-erro{
+	color:red;
 }

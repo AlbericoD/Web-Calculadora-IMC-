@@ -1,4 +1,5 @@
 function novopaciente(form) {
+
     var paciente = {
         nome: form.nome.value,
         peso: form.peso.value,
@@ -9,13 +10,16 @@ function novopaciente(form) {
     return paciente;
 }
 function criarLinhas(paciente) {
+
     var novaInfo = document.createElement("tr");
     novaInfo.classList.add("paciente");
+
     novaInfo.appendChild(criarTd(paciente.nome, "info-nome"));
     novaInfo.appendChild(criarTd(paciente.peso, "info-peso"));
     novaInfo.appendChild(criarTd(paciente.altura, "info-altura"));
     novaInfo.appendChild(criarTd(paciente.gordura, "info-gordura"));
     novaInfo.appendChild(criarTd(paciente.imc, "info-imc"));
+
     return novaInfo;
 }
 function criarTd(dado, classe) {
@@ -24,6 +28,7 @@ function criarTd(dado, classe) {
     td.classList.add(classe);
     return td;
 }
+
 function validaPaciente(paciente) {
     var altura = validaAltura(paciente.altura);
     var peso = validaPeso(paciente.peso);
@@ -38,20 +43,17 @@ function validaPeso(peso) {
 function calculaImc(peso, altura) {
     var imc = 0;
     imc = peso / (altura * altura);
-
     return imc.toFixed(3);
 }
 function cadastro() {
+
     event.preventDefault();
     var form = document.querySelector("#form-adiciona");
     var paciente = novopaciente(form);
     var ehvalido = validaPaciente(paciente);
-
+    //validaPaciente(paciente);
     if (!ehvalido) {
         console.log("erro valida botao");
-        var msgErro = document.querySelector("#msg-erro");
-        msgErro.textContent = "Parece que faltou algum dado válido.";
-        alert("Erro ao adicionar paciente!");
         return;
     } else {
         var novaInfo = criarLinhas(paciente);
