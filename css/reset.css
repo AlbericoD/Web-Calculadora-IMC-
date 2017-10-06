@@ -46,3 +46,15 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.fadeOut{
+	opacity: 0;
+	transition: 0.5s;
+}
+#filtrar-tabela{
+	width: 200px;
+	height: 35px;
+	margin-bottom: 5px;
+}
+.invisivel{
+	display: none;
+}

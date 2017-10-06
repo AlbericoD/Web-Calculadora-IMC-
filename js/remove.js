@@ -1,7 +1,10 @@
 var tabela = document.querySelector("table");
-tabela.addEventListener("dblclick",function(event){
+tabela.addEventListener("dblclick", function (event) {
     console.log(event.target);
-    var remove =  event.target; // remove td
-    var removelinha = remove.parentNode; // remove tr
-    removelinha.remove();
+    if (event.target.tagName == "TD") {
+        event.target.parentNode.classList.add("fadeOut");
+        setTimeout(function () {
+            event.target.parentNode.remove();
+        }, 500);
+    }
 });
