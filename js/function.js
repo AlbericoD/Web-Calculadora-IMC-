@@ -28,7 +28,6 @@ function criarTd(dado, classe) {
     td.classList.add(classe);
     return td;
 }
-
 function validaPaciente(paciente) {
     var altura = validaAltura(paciente.altura);
     var peso = validaPeso(paciente.peso);
